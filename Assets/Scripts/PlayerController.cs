@@ -10,8 +10,9 @@ public class PlayerController : MonoBehaviour
 
     [Header("Stats")]
     public int score;
-    [SerializeField] private int health = 5;
-    public int currentHealth;
+    [SerializeField] private int maxHealth = 5;
+    public static int currentHealth;
+    public HealthBar healthBar;
 
 
 
@@ -39,7 +40,9 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        currentHealth = health;
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
+
         playerRb = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererDown;
     }
@@ -128,6 +131,7 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Projectile")
         {
             currentHealth--;
+            healthBar.SetHealth(currentHealth);
             Destroy(collision.gameObject);
         }
         if (currentHealth <= 0)

@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
+    private int collisionCount = 0;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall")
+        collisionCount++;
+        if (collision.gameObject.tag == "Wall" && collisionCount > 1)
         {
             Destroy(gameObject);
         }

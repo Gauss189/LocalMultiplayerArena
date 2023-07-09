@@ -87,18 +87,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4706c9d5e339949b1f0471b5a2fdc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  health: 5
+  currentHealth: 0
   speed: 5
   inputUp: 119
   inputDown: 115
   inputLeft: 97
   inputRight: 100
+  inputFire: 32
   projectilePrefab: {fileID: 6916646696235407044, guid: 981a141f91f3f994c89666af477fe614, type: 3}
   projectileSpeed: 5
   spriteRendererUp: {fileID: 9203301674163050318}
   spriteRendererDown: {fileID: 5985561411236621382}
   spriteRendererLeft: {fileID: 4078315443728540531}
   spriteRendererRight: {fileID: 2110734560344597333}
-  spriteRendererDeath: {fileID: 0}
 --- !u!1 &5064584867708988493
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +176,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 813718608, guid: dbabe320441859746b70851407f3c681, type: 3}
+  m_Sprite: {fileID: -1553889554, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -196,12 +199,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006d70c924550c74c9b709c3fbf9d334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSprite: {fileID: 813718608, guid: dbabe320441859746b70851407f3c681, type: 3}
+  idleSprite: {fileID: -1553889554, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   animationSprites:
-  - {fileID: 813718608, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: 385169914, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: 393072014, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: 910515126, guid: dbabe320441859746b70851407f3c681, type: 3}
+  - {fileID: -1553889554, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: -48560222, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: -254699448, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: -72022450, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   animationTime: 0.25
   loop: 1
   idle: 1
@@ -279,7 +282,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 1515668610, guid: dbabe320441859746b70851407f3c681, type: 3}
+  m_Sprite: {fileID: 440238418, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -302,12 +305,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006d70c924550c74c9b709c3fbf9d334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSprite: {fileID: 1515668610, guid: dbabe320441859746b70851407f3c681, type: 3}
+  idleSprite: {fileID: 440238418, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   animationSprites:
-  - {fileID: 1515668610, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: 1865302420, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: -266171601, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: 1999265661, guid: dbabe320441859746b70851407f3c681, type: 3}
+  - {fileID: 440238418, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: -1995714699, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: -972563839, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: -519937985, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   animationTime: 0.25
   loop: 1
   idle: 1
@@ -385,7 +388,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 894068543, guid: dbabe320441859746b70851407f3c681, type: 3}
+  m_Sprite: {fileID: -872311683, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -408,12 +411,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006d70c924550c74c9b709c3fbf9d334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSprite: {fileID: 894068543, guid: dbabe320441859746b70851407f3c681, type: 3}
+  idleSprite: {fileID: -872311683, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   animationSprites:
-  - {fileID: 894068543, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: -1728160909, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: -1953330532, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: -648880055, guid: dbabe320441859746b70851407f3c681, type: 3}
+  - {fileID: -872311683, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: -2050525103, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: -242340118, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: 130284535, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   animationTime: 0.25
   loop: 1
   idle: 1
@@ -491,7 +494,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 385205637, guid: dbabe320441859746b70851407f3c681, type: 3}
+  m_Sprite: {fileID: -770423187, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -514,12 +517,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 006d70c924550c74c9b709c3fbf9d334, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idleSprite: {fileID: 385205637, guid: dbabe320441859746b70851407f3c681, type: 3}
+  idleSprite: {fileID: -770423187, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   animationSprites:
-  - {fileID: 385205637, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: 1772859553, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: -539190160, guid: dbabe320441859746b70851407f3c681, type: 3}
-  - {fileID: 1321082513, guid: dbabe320441859746b70851407f3c681, type: 3}
+  - {fileID: -770423187, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: -1073194659, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: -771289120, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
+  - {fileID: 703871107, guid: d134a142264d7ea4980b508cd9eec2d0, type: 3}
   animationTime: 0.25
   loop: 1
   idle: 1
