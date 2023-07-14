@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -8,27 +6,17 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 direction = Vector2.down;
 
-    [Header("Stats")]
-    public int score;
-    [SerializeField] private int maxHealth = 5;
-    public static int currentHealth;
-    public HealthBar healthBar;
-
-
-
     [Header("Controller")]
-    [SerializeField] private float speed = 5f;
+    [SerializeField] private float speed = 10f;
     [SerializeField] private KeyCode inputUp = KeyCode.W;
     [SerializeField] private KeyCode inputDown = KeyCode.S;
     [SerializeField] private KeyCode inputLeft = KeyCode.A;
     [SerializeField] private KeyCode inputRight = KeyCode.D;
     [SerializeField] private KeyCode inputFire = KeyCode.Space;
 
-
     [Header("Shooting")]
     [SerializeField] private GameObject projectilePrefab;
     [SerializeField] private float projectileSpeed;
-
 
     [Header("AnimationSequnce")]
     [SerializeField] private AnimatedSpriteRenderer spriteRendererUp;
@@ -40,9 +28,6 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
-        currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
-
         playerRb = GetComponent<Rigidbody2D>();
         activeSpriteRenderer = spriteRendererDown;
     }
@@ -124,35 +109,5 @@ public class PlayerController : MonoBehaviour
 
         activeSpriteRenderer = spriteRenderer;
         activeSpriteRenderer.idle = direction == Vector2.zero;
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Projectile")
-        {
-            currentHealth--;
-            healthBar.SetHealth(currentHealth);
-            Destroy(collision.gameObject);
-        }
-        if (currentHealth <= 0)
-        {
-            Invoke(nameof(OnDeathSequence), 0.3f);
-            Destroy(collision.gameObject);
-        }
-    }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Coin")
-        {
-            score++;
-            Destroy(collision.gameObject);
-        }
-    }
-
-    private void OnDeathSequence()
-    {
-        gameObject.SetActive(false);
-        FindObjectOfType<GameManager>().CheckWinState();
     }
 }

@@ -642,6 +642,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4345111973384048842, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1111611608}
+    - target: {fileID: -4345111973384048842, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4345111973384048842, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
+      propertyPath: knockBackForce
+      value: 10000000
+      objectReference: {fileID: 0}
+    - target: {fileID: -4345111973384048842, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
+      propertyPath: knockBackDuration
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2110734560344597333, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
       propertyPath: idleSprite
       value: 
@@ -668,7 +684,7 @@ PrefabInstance:
       objectReference: {fileID: 1999265661, guid: dbabe320441859746b70851407f3c681, type: 3}
     - target: {fileID: 3606572970644754576, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
       propertyPath: speed
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3606572970644754576, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
       propertyPath: healthBar
@@ -676,7 +692,7 @@ PrefabInstance:
       objectReference: {fileID: 1111611608}
     - target: {fileID: 3606572970644754576, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
       propertyPath: projectileSpeed
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3606572970644754576, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
       propertyPath: spriteRendererUp
@@ -8868,7 +8884,7 @@ GameObject:
   - component: {fileID: 1740777814}
   m_Layer: 0
   m_Name: Stage
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9155,13 +9171,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4345111973384048842, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1826853738}
+    - target: {fileID: -4345111973384048842, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
+      propertyPath: maxHealth
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -4345111973384048842, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
+      propertyPath: knockBackForce
+      value: 10000000
+      objectReference: {fileID: 0}
+    - target: {fileID: -4345111973384048842, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
+      propertyPath: knockBackDuration
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2110734560344597333, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
       propertyPath: animationTime
       value: 0.1666667
       objectReference: {fileID: 0}
     - target: {fileID: 3606572970644754576, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
       propertyPath: speed
-      value: 7
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3606572970644754576, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
       propertyPath: inputUp
@@ -9189,7 +9221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3606572970644754576, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
       propertyPath: projectileSpeed
-      value: 10
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3606572970644754576, guid: 50870b3060bb5714fa8a35032394e1cb, type: 3}
       propertyPath: spriteRendererUp
