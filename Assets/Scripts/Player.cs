@@ -1,22 +1,25 @@
+using TMPro;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private TextMeshProUGUI scoreText;
     public int score;
+    public int startScore;
+
     [SerializeField] private int maxHealth = 5;
     public int currentHealth;
     public HealthBar healthBar;
-
-    private bool isKnockback;
 
     private void Awake()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        SetScore(startScore);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Projectile" && !isKnockback)
+        if (collision.gameObject.tag == "Projectile")
         {
             --currentHealth;
             healthBar.SetHealth(currentHealth);
@@ -35,6 +38,7 @@ public class Player : MonoBehaviour
         {
             score++;
             Destroy(collision.gameObject);
+            SetScore(score);
         }
     }
 
@@ -42,5 +46,10 @@ public class Player : MonoBehaviour
     {
         gameObject.SetActive(false);
         FindObjectOfType<GameManager>().CheckWinState();
+    }
+
+    private void SetScore(int score)
+    {
+        scoreText.SetText("Score: " + score);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class CoinSpawnManager : MonoBehaviour
 {
     [SerializeField] private GameObject coinPrefab;
-    [SerializeField] private float spawnInterval = 7f;
+    private float spawnInterval = 7f;
 
     private float minY = -4f;
     private float maxY = 7f;
