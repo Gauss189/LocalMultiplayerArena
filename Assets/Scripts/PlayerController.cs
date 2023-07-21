@@ -3,7 +3,6 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D playerRb { get; private set; }
-
     private Vector2 direction = Vector2.down;
 
     [Header("Controller")]
@@ -13,6 +12,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private KeyCode inputLeft = KeyCode.A;
     [SerializeField] private KeyCode inputRight = KeyCode.D;
     [SerializeField] private KeyCode inputFire = KeyCode.Space;
+    public static KeyCode playerOnePauseButton = KeyCode.Escape;
+    public static KeyCode playerTwoPauseButton = KeyCode.Backspace;
 
     [Header("Shooting")]
     [SerializeField] private GameObject projectilePrefab;
@@ -36,6 +37,11 @@ public class PlayerController : MonoBehaviour
     {
         Vector2 currentDirection = direction;
 
+        /* 
+         * for now, I don`t figure out how move it to projectile with lesser or the same amount of code,
+         * logically its obvious, but technicly, while this is will cost some time and don`t cause problem
+         * I will leave it that way, for now
+         */
         if (Input.GetKeyDown(inputFire) && currentDirection != Vector2.zero)
         {
             Vector3 instantiatePosition = GetInstantiationPosition(currentDirection);
@@ -43,6 +49,8 @@ public class PlayerController : MonoBehaviour
             Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
             rb.velocity = currentDirection * projectileSpeed;
         }
+        //
+
         if (Input.GetKey(inputUp))
         {
             SetDirection(Vector2.up, spriteRendererUp);

@@ -4,12 +4,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI scoreText;
-    public int score;
+    public static int score;
     public int startScore;
 
     [SerializeField] private int maxHealth = 5;
     public int currentHealth;
-    public HealthBar healthBar;
+    public HealthBarUI healthBar;
 
     private void Awake()
     {
